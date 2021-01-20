@@ -4,7 +4,45 @@ function Calculator() {
   const [expression, setExpression] = React.useState("");
 
   const calculate = () => {
-    console.log(expression);
+    // Addition
+    if (expression.indexOf("+") !== -1) {
+      const lhs = expression.substring(0, expression.indexOf("+"));
+      const rhs = expression.substring(
+        expression.indexOf("+") + 1,
+        expression.length
+      );
+      setExpression(Number(lhs) + Number(rhs));
+    }
+
+    // Subtraction
+    if (expression.indexOf("-") !== -1) {
+      const lhs = expression.substring(0, expression.indexOf("-"));
+      const rhs = expression.substring(
+        expression.indexOf("-") + 1,
+        expression.length
+      );
+      setExpression(Number(lhs) - Number(rhs));
+    }
+
+    // Multiplication
+    if (expression.indexOf("*") !== -1) {
+      const lhs = expression.substring(0, expression.indexOf("*"));
+      const rhs = expression.substring(
+        expression.indexOf("*") + 1,
+        expression.length
+      );
+      setExpression(Number(lhs) * Number(rhs));
+    }
+
+    // Division
+    if (expression.indexOf("/") !== -1) {
+      const lhs = expression.substring(0, expression.indexOf("/"));
+      const rhs = expression.substring(
+        expression.indexOf("/") + 1,
+        expression.length
+      );
+      setExpression(Number(lhs) / Number(rhs));
+    }
   };
   const update = (character) => {
     if (character === "=") {
