@@ -1,0 +1,24 @@
+.calculator {
+  margin: 32px;
+  padding: 16px;
+  width: 85px;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen {
+  margin-bottom: 16px;
+}
+
+.buttons {
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.calculate-button {
+  width: 25px;
+}
